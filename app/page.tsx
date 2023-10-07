@@ -2,36 +2,36 @@
 
 import { useState } from 'react';
 import Head from 'next/head';
-import Question from '@/lib/components/Question';
-import Result from '@/lib/components/Result';
 
 const questions = [
   '質問1: このテストは役に立つと思いますか？',
   '質問2: このテストは難しいと思いますか？',
   '質問3: このテストは楽しいと思いますか？',
   '質問4: このテストは悲しいと思いますか？',
-  // 他の質問をここに追加
 ];
 
 export default function Home() {
-  const [scores, setScores] = useState<number[]>([]);
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [scores, setScores] = useState<number[]>(Array(questions.length).fill(0));
+  const [showResults, setShowResults] = useState(false); // 結果を表示するための状態
+  const shouldShowResultsButton = scores.every((score) => score !== 0); // scoresに0が含まれていないかチェック
 
-  const handleAnswer = (score: number) => {
+  const handleAnswer = (index: number, score: number) => {
     const newScores = [...scores];
-    newScores[currentQuestionIndex] = score;
+    newScores[index] = score;
     setScores(newScores);
-
-    // 最後の質問でない場合、次の質問へ進む
-    // 最後の質問の場合、結果へ進む
-    if (currentQuestionIndex < questions.length) {
-      setCurrentQuestionIndex(currentQuestionIndex + 1);
-    }
   };
 
+  const totalScore = scores.reduce((acc, score) => acc + score, 0);
   const totalScore_1 = scores.slice(0, 2).reduce((acc, score) => acc + score, 0);
   const totalScore_2 = scores.slice(2, 4).reduce((acc, score) => acc + score, 0);
-  const totalScores = [totalScore_1, totalScore_2];
+  const resultMessage = `合計スコア ${totalScore}`;
+  const resultMessage1 = `1と2の合計スコア ${totalScore_1}`;
+  const resultMessage2 = `3と4の合計スコア ${totalScore_2}`;
+
+  const handleShowResults = () => {
+    // 結果を表示するボタンをクリックしたら結果を表示
+    setShowResults(true);
+  };
 
   return (
     <div>
@@ -41,13 +41,36 @@ export default function Home() {
       </Head>
 
       <main>
-        {currentQuestionIndex < questions.length ? (
-          <Question
-            question={questions[currentQuestionIndex]}
-            onAnswer={handleAnswer}
-          />
-        ) : (
-          <Result totalScores={totalScores} />
+        <h1>心理テスト</h1>
+        {questions.map((question, index) => (
+          <div key={index}>
+            <h2>{question}</h2>
+            {[1, 2, 3, 4, 5, 6].map((score) => (
+              <button
+                key={score}
+                onClick={() => handleAnswer(index, score)}
+                className={scores[index] === score ? 'selected' : ''}
+              // disabled={showResults} // 結果表示中はボタンを無効化
+              >
+                {score}
+              </button>
+            ))}
+          </div>
+        ))}
+        {shouldShowResultsButton && (
+          <div>
+            <button onClick={handleShowResults}>結果を表示</button>
+          </div>
+        )}
+        {showResults && ( // 結果を表示する場合に表示
+          <div>
+            <h2>結果</h2>
+            <p>テスト結果：{resultMessage}</p>
+            <h3>結果1</h3>
+            <p>{resultMessage1}</p>
+            <h3>結果2</h3>
+            <p>{resultMessage2}</p>
+          </div>
         )}
       </main>
     </div>
