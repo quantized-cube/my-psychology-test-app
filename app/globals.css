@@ -1,4 +1,9 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
 /* Add your global styles here */
+
 button {
   margin: 5px;
   padding: 10px 15px;

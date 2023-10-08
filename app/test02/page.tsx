@@ -6,9 +6,9 @@ import Link from 'next/link'
 
 const questions = [
   '質問1: このテストは役に立つと思いますか？',
-  '質問2: このテストは難しいと思いますか？',
-  '質問3: このテストは楽しいと思いますか？',
-  '質問4: このテストは悲しいと思いますか？',
+  '質問2: このテストは簡単だと思いますか？',
+  '質問3: このテストは嬉しいと思いますか？',
+  '質問4: このテストは無意味だと思いますか？',
 ];
 
 export default function Home() {
@@ -37,12 +37,12 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>心理テスト01</title>
+        <title>心理テスト02</title>
         <meta name="description" content="心理テストのサンプル" />
       </Head>
 
       <main>
-        <h1>心理テスト01</h1>
+        <h1>心理テスト02</h1>
         {questions.map((question, index) => (
           <div key={index}>
             <h2>{question}</h2>
