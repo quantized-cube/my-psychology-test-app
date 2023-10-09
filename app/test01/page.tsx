@@ -68,11 +68,15 @@ export default function Home() {
       x: {
         min: 0,
         max: 12,
+        ticks: {
+          stepSize: 3,
+        },
       }
     },
     plugins: {
       legend: {
-        position: 'right' as const,
+        // position: 'right' as const,
+        display: false,
       },
       title: {
         display: true,
