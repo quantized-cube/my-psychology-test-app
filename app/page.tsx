@@ -16,6 +16,11 @@ export default function Home() {
         <h1>心理テストまとめ</h1>
         <ul>
           <li>
+            <Link href="/ysqr">
+              YSQ-R
+            </Link>
+          </li>
+          <li>
             <Link href="/test01">
               心理テスト01
             </Link>
