@@ -3,6 +3,26 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link'
+import { Bar } from 'react-chartjs-2'; // react-chartjs-2をインポート
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
 
 const questions = [
   '質問1: このテストは役に立つと思いますか？',
@@ -22,16 +42,57 @@ export default function Home() {
     setScores(newScores);
   };
 
-  const totalScore = scores.reduce((acc, score) => acc + score, 0);
+  // const totalScore = scores.reduce((acc, score) => acc + score, 0);
   const totalScore_1 = scores.slice(0, 2).reduce((acc, score) => acc + score, 0);
   const totalScore_2 = scores.slice(2, 4).reduce((acc, score) => acc + score, 0);
-  const resultMessage = `合計スコア ${totalScore}`;
+  // const resultMessage = `合計スコア ${totalScore}`;
   const resultMessage1 = `1と2の合計スコア ${totalScore_1}`;
   const resultMessage2 = `3と4の合計スコア ${totalScore_2}`;
 
   const handleShowResults = () => {
     // 結果を表示するボタンをクリックしたら結果を表示
     setShowResults(true);
+  };
+
+  // 棒グラフのデータ
+  const options = {
+    indexAxis: 'y' as const,
+    elements: {
+      bar: {
+        borderWidth: 5,
+      },
+    },
+    responsive: true,
+    scales: {
+      x: {
+        min: 0,
+        max: 12,
+      }
+    },
+    plugins: {
+      legend: {
+        position: 'right' as const,
+      },
+      title: {
+        display: true,
+        text: '結果のグラフ',
+      },
+    },
+  };
+  const labels = ['結果1', '結果2'];
+  const barChartData = {
+    labels: labels, // カテゴリーデータを設定
+    datasets: [
+      {
+        label: 'スコア',
+        data: [totalScore_1, totalScore_2],
+        borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        borderWidth: 3,
+        hoverBackgroundColor: 'rgba(75, 192, 192, 0.8)',
+        hoverBorderColor: 'rgba(75, 192, 192, 1)',
+      },
+    ],
   };
 
   return (
@@ -67,7 +128,12 @@ export default function Home() {
           <div>
             <hr style={{ margin: '30px' }} />
             <h2>結果</h2>
-            <p>テスト結果：{resultMessage}</p>
+            <Bar // 棒グラフを表示
+              data={barChartData}
+              // width={400}
+              height={50}
+              options={options}
+            />
             <h3>結果1</h3>
             <p>{resultMessage1}</p>
             <h3>結果2</h3>
