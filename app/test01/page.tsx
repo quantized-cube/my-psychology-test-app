@@ -62,6 +62,7 @@ export default function Home() {
         borderWidth: 5,
       },
     },
+    maintainAspectRatio: false,
     responsive: true,
     scales: {
       x: {
@@ -128,12 +129,14 @@ export default function Home() {
           <div>
             <hr style={{ margin: '30px' }} />
             <h2>結果</h2>
-            <Bar // 棒グラフを表示
-              data={barChartData}
-              // width={400}
-              height={50}
-              options={options}
-            />
+            <div className="mx-auto max-w-min">
+              <Bar // 棒グラフを表示
+                data={barChartData}
+                // width={600}
+                height={150}
+                options={options}
+              />
+            </div>
             <h3>結果1</h3>
             <p>{resultMessage1}</p>
             <h3>結果2</h3>
