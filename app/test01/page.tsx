@@ -58,13 +58,14 @@ export default function Home() {
             ))}
           </div>
         ))}
-        {shouldShowResultsButton && (
-          <div>
+        {shouldShowResultsButton && !showResults && (
+          <div style={{ marginTop: '30px' }}>
             <button onClick={handleShowResults}>結果を表示</button>
           </div>
         )}
         {showResults && ( // 結果を表示する場合に表示
           <div>
+            <hr style={{ margin: '30px' }} />
             <h2>結果</h2>
             <p>テスト結果：{resultMessage}</p>
             <h3>結果1</h3>
@@ -73,10 +74,12 @@ export default function Home() {
             <p>{resultMessage2}</p>
           </div>
         )}
-        <hr />
-        <Link href="/">
-          トップページに戻る
-        </Link>
+        <hr style={{ margin: '30px' }} />
+        <div style={{ fontSize: '16px', margin: '30px' }}>
+          <Link href="/">
+            トップページに戻る
+          </Link>
+        </div>
       </main>
     </div>
   );

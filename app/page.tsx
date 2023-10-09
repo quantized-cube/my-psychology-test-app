@@ -2,6 +2,7 @@
 
 import Head from 'next/head';
 import Link from 'next/link'
+import './globals.css'
 
 export default function Home() {
   return (

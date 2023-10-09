@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities; */
 
-/* Add your global styles here */
-
 button {
   margin: 5px;
   padding: 10px 15px;
@@ -19,4 +17,20 @@ button.selected {
 main {
   text-align: center;
   margin: 20px;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+ul {
+  width: fit-content;
+  margin: auto;
+}
+
+li {
+  font-size: 20px;
+  padding: 5px;
+  list-style-type: decimal;
+  border-bottom: 1px #2a77e0 dotted;
 }
