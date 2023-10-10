@@ -23,15 +23,17 @@ ChartJS.register(
   Legend
 );
 
-const labels = ['ED', 'AB', 'MA', 'SI', 'DS'];
+const labels = [
+  'ED',
+  'AB',
+  'MA',
+];
 
 // 1-5: ED
 const questions_1_ED = [
   "I haven\'t gotten enough love and attention.",
   "For the most part, I haven\'t had someone to depend on for advice and emotional support.",
   "For much of my life, I haven\'t had someone who wanted to get close to me and spend a lot of time with me.",
-  "For much of my life, I haven\'t felt that I am special to someone. ",
-  "I have rarely had a strong person to give me sound advice or direction when I\'m not sure what to do.",
 ];
 
 // 6-13: AB
@@ -39,36 +41,10 @@ const questions_2_AB = [
   "I worry that people I feel close to will leave me or abandon me.",
   "I don\'t feel that important relationships will last; I expect them to end.",
   "hogehoge",
-  "hogehoge",
-  "hogehoge",
-  "hogehoge",
-  "hogehoge",
-  "hogehoge",
 ];
 
 // 14-18: MA
 const questions_3_MA = [
-  "fugafuga",
-  "fugafuga",
-  "fugafuga",
-  "fugafuga",
-  "fugafuga",
-];
-
-// 19-23: SI
-const questions_4_SI = [
-  "hogehoge",
-  "hogehoge",
-  "hogehoge",
-  "hogehoge",
-  "hogehoge",
-];
-
-// 24-29: DS
-const questions_5_DS = [
-  "fugafuga",
-  "fugafuga",
-  "fugafuga",
   "fugafuga",
   "fugafuga",
   "fugafuga",
@@ -78,8 +54,6 @@ const a_questions = [
   questions_1_ED,
   questions_2_AB,
   questions_3_MA,
-  questions_4_SI,
-  questions_5_DS,
 ];
 const questions = a_questions.flat();
 
@@ -191,7 +165,7 @@ export default function Home() {
     <div>
       <Head>
         <title>YSQ-R</title>
-        <meta name="description" content="YSQ-Rのテスト" />
+        <meta name="description" content="心理テストのサンプル" />
       </Head>
 
       <main>

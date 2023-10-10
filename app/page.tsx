@@ -16,6 +16,11 @@ export default function Home() {
         <h1>心理テストまとめ</h1>
         <ul>
           <li>
+            <Link href="/tipij">
+              TIPI-J
+            </Link>
+          </li>
+          <li>
             <Link href="/ysqr">
               YSQ-R
             </Link>
@@ -28,6 +33,11 @@ export default function Home() {
           <li>
             <Link href="/test02">
               心理テスト02
+            </Link>
+          </li>
+          <li>
+            <Link href="/test03">
+              心理テスト03
             </Link>
           </li>
         </ul>
