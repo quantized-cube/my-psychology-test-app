@@ -23,7 +23,7 @@ ChartJS.register(
   Legend
 );
 
-const labels = ['ED', 'AB', 'MA'];
+const labels = ['ED', 'AB', 'MA', 'SI', 'DS'];
 
 // 1-5: ED
 const questions_1_ED = [
@@ -55,10 +55,36 @@ const questions_3_MA = [
   "fugafuga",
 ];
 
-const questions = questions_1_ED.concat(questions_2_AB, questions_3_MA);
+// 19-23: SI
+const questions_4_SI = [
+  "hogehoge",
+  "hogehoge",
+  "hogehoge",
+  "hogehoge",
+  "hogehoge",
+];
 
-const lengths = [questions_1_ED.length, questions_2_AB.length, questions_3_MA.length]
-const cum_lengths = [0, ...lengths.map((sum => value => sum += value)(0))]
+// 24-29: DS
+const questions_5_DS = [
+  "fugafuga",
+  "fugafuga",
+  "fugafuga",
+  "fugafuga",
+  "fugafuga",
+  "fugafuga",
+];
+
+const a_questions = [
+  questions_1_ED,
+  questions_2_AB,
+  questions_3_MA,
+  questions_4_SI,
+  questions_5_DS,
+];
+const questions = a_questions.flat();
+
+const lengths = a_questions.map((question) => question.length)
+const cumLengths = [0, ...lengths.map((sum => value => sum += value)(0))]
 
 export default function Home() {
   const [scores, setScores] = useState<number[]>(Array(questions.length).fill(0));
@@ -73,21 +99,35 @@ export default function Home() {
   };
 
   const averageScores: number[] = [];
-  for (let i = 0; i < cum_lengths.length - 1; i++) {
-    const start = cum_lengths[i];
-    const end = cum_lengths[i + 1];
+  for (let i = 0; i < cumLengths.length - 1; i++) {
+    const start = cumLengths[i];
+    const end = cumLengths[i + 1];
     const length = lengths[i];
     const averageScore = scores.slice(start, end).reduce((acc, score) => acc + score, 0) / length;
     averageScores.push(averageScore);
   }
   const pairLabelsAverageScores = labels.map((label, index) => [label, averageScores[index]]);
-  const sortedPairLabelsAverageScores = [...pairLabelsAverageScores].sort(([al, as], [bl, bs]) => bs - as);
+  // 以下は型がうまくいかない
+  // const sortedPairLabelsAverageScores = [...pairLabelsAverageScores].sort(([al, as], [bl, bs]) => bs - as);
+  // const sortedLabels = sortedPairLabelsAverageScores.map((pair, index) => `${pair[0]}`);
+  // const sortedAverageScores = sortedPairLabelsAverageScores.map((pair, index) => `${pair[1]}`);
+  // 一旦オブジェクトに変換
+  const objLabelsAverageScores: { [key: string]: number } = Object.fromEntries(pairLabelsAverageScores);
+  // キーを含んだ配列に変換
+  const array = Object.keys(objLabelsAverageScores).map((k) => ({ key: k, value: objLabelsAverageScores[k] }));
   // スコアの降順
-  const sortedLabels = sortedPairLabelsAverageScores.map((pair, index) => `${pair[0]}`);
-  const sortedAverageScores = sortedPairLabelsAverageScores.map((pair, index) => `${pair[1]}`);
+  array.sort((a, b) => b.value - a.value);
+  // オブジェクトに戻す
+  const sortedObjLabelsAverageScores = Object.assign({}, ...array.map((item) => ({
+    [item.key]: item.value,
+  })));
+  // スコアの降順のラベル
+  const sortedLabels = Object.keys(sortedObjLabelsAverageScores);
+  // スコアの降順のスコア
+  const sortedAverageScores = Object.values(sortedObjLabelsAverageScores);
 
   const resultMessages: string[] = [];
-  for (let i = 0; i < cum_lengths.length - 1; i++) {
+  for (let i = 0; i < cumLengths.length - 1; i++) {
     const resultMessage = `${labels[i]}のスコア ${averageScores[i].toFixed(2)}`;
     resultMessages.push(resultMessage);
   }
@@ -167,12 +207,8 @@ export default function Home() {
 
         {questions.map((question, index) => (
           <div key={index}>
-            {index === 0 && <hr style={{ margin: '30px' }} />}
-            {index === lengths[0] && <hr style={{ margin: '30px' }} />}
-            {index === lengths[0] + lengths[1] && <hr style={{ margin: '30px' }} />}
-            {index === 0 && <h2>ED</h2>}
-            {index === lengths[0] && <h2>AB</h2>}
-            {index === lengths[0] + lengths[1] && <h2>MA</h2>}
+            {cumLengths.includes(index) && <hr style={{ margin: '30px' }} />}
+            {cumLengths.includes(index) && <h2>{labels[cumLengths.indexOf(index)]}</h2>}
             <h3>{question}</h3>
             {[1, 2, 3, 4, 5, 6].map((score) => (
               <button
