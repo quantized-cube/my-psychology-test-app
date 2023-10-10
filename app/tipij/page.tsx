@@ -3,12 +3,17 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link'
-import { Bar } from 'react-chartjs-2'; // react-chartjs-2をインポート
+import { Radar } from 'react-chartjs-2'; // react-chartjs-2をインポート
 import {
   Chart as ChartJS,
   CategoryScale,
   LinearScale,
   BarElement,
+  PolarAreaController,
+  RadialLinearScale,
+  PointElement,
+  LineElement,
+  ArcElement,
   Title,
   Tooltip,
   Legend,
@@ -17,6 +22,11 @@ import {
 ChartJS.register(
   CategoryScale,
   LinearScale,
+  PolarAreaController,
+  RadialLinearScale,
+  PointElement,
+  LineElement,
+  ArcElement,
   BarElement,
   Title,
   Tooltip,
@@ -77,23 +87,25 @@ export default function Home() {
 
   // 棒グラフのデータ
   const options = {
-    indexAxis: 'y' as const,
-    elements: {
-      bar: {
-        borderWidth: 5,
+    // elements: {
+    //   line: {
+    //     borderWidth: 5,
+    //   },
+    // },
+    scales: {
+      r: {
+        angleLines: {
+          display: true
+        },
+        min: 0,
+        max: 14,
+        ticks: {
+          stepSize: 2
+        }
       },
     },
     maintainAspectRatio: false,
     responsive: true,
-    scales: {
-      x: {
-        min: 1,
-        max: 15,
-        ticks: {
-          stepSize: 1,
-        },
-      }
-    },
     plugins: {
       legend: {
         // position: 'right' as const,
@@ -105,17 +117,18 @@ export default function Home() {
       },
     },
   };
-  const barChartData = {
+  const radarChartData = {
     labels: labels,
     datasets: [
       {
         label: 'スコア',
         data: resultScores,
+        fill: true,
         borderColor: 'rgb(255, 99, 132)',
         backgroundColor: 'rgba(255, 99, 132, 0.5)',
-        borderWidth: 3,
-        hoverBackgroundColor: 'rgba(75, 192, 192, 0.8)',
-        hoverBorderColor: 'rgba(75, 192, 192, 1)',
+        // borderWidth: 3,
+        pointHoverBackgroundColor: 'rgba(75, 192, 192, 0.8)',
+        pointHoverBorderColor: 'rgba(75, 192, 192, 1)',
       },
     ],
   };
@@ -166,17 +179,17 @@ export default function Home() {
           <div>
             <h2>結果</h2>
             <div className="mx-auto max-w-min">
-              <Bar // 棒グラフを表示
-                data={barChartData}
-                // width={600}
-                height={150}
+              <Radar
+                data={radarChartData}
+                // width={50}
+                height={500}
                 options={options}
               />
             </div>
             {labels.map((label, index) => (
               <div key={label}>
-                <h3>結果{label}</h3>
-                <p>{resultMessages[index]}</p>
+                {/* <p>{resultMessages[index]}</p> */}
+                <p>{label}: {resultScores[index]}</p>
               </div>
             ))}
           </div>
