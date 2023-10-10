@@ -27,32 +27,32 @@ const labels = ['ED', 'AB', 'MA'];
 
 // 1-5: ED
 const questions_1_ED = [
-  'I haven\'t gotten enough love and attention.',
-  'For the most part, I haven\'t had someone to depend on for advice and emotional support.',
-  'For much of my life, I haven\'t had someone who wanted to get close to me and spend a lot of time with me.',
-  'For much of my life, I haven\'t felt that I am special to someone. ',
-  'I have rarely had a strong person to give me sound advice or direction when I\'m not sure what to do.',
+  "I haven\'t gotten enough love and attention.",
+  "For the most part, I haven\'t had someone to depend on for advice and emotional support.",
+  "For much of my life, I haven\'t had someone who wanted to get close to me and spend a lot of time with me.",
+  "For much of my life, I haven\'t felt that I am special to someone. ",
+  "I have rarely had a strong person to give me sound advice or direction when I\'m not sure what to do.",
 ];
 
 // 6-13: AB
 const questions_2_AB = [
-  'I worry that people I feel close to will leave me or abandon me.',
-  'I don\'t feel that important relationships will last; I expect them to end.',
-  'hogehoge',
-  'hogehoge',
-  'hogehoge',
-  'hogehoge',
-  'hogehoge',
-  'hogehoge',
+  "I worry that people I feel close to will leave me or abandon me.",
+  "I don\'t feel that important relationships will last; I expect them to end.",
+  "hogehoge",
+  "hogehoge",
+  "hogehoge",
+  "hogehoge",
+  "hogehoge",
+  "hogehoge",
 ];
 
 // 14-18: MA
 const questions_3_MA = [
-  'fugafuga',
-  'fugafuga',
-  'fugafuga',
-  'fugafuga',
-  'fugafuga',
+  "fugafuga",
+  "fugafuga",
+  "fugafuga",
+  "fugafuga",
+  "fugafuga",
 ];
 
 const questions = questions_1_ED.concat(questions_2_AB, questions_3_MA);
@@ -64,6 +64,7 @@ export default function Home() {
   const [scores, setScores] = useState<number[]>(Array(questions.length).fill(0));
   const [showResults, setShowResults] = useState(false); // 結果を表示するための状態
   const shouldShowResultsButton = scores.every((score) => score !== 0); // scoresに0が含まれていないかチェック
+  const [sortDescending, setSortDescending] = useState(false); // スコアの降順ソートトグル
 
   const handleAnswer = (index: number, score: number) => {
     const newScores = [...scores];
@@ -71,7 +72,7 @@ export default function Home() {
     setScores(newScores);
   };
 
-  const averageScores = [];
+  const averageScores: number[] = [];
   for (let i = 0; i < cum_lengths.length - 1; i++) {
     const start = cum_lengths[i];
     const end = cum_lengths[i + 1];
@@ -79,6 +80,11 @@ export default function Home() {
     const averageScore = scores.slice(start, end).reduce((acc, score) => acc + score, 0) / length;
     averageScores.push(averageScore);
   }
+  const pairLabelsAverageScores = labels.map((label, index) => [label, averageScores[index]]);
+  const sortedPairLabelsAverageScores = [...pairLabelsAverageScores].sort(([al, as], [bl, bs]) => bs - as);
+  // スコアの降順
+  const sortedLabels = sortedPairLabelsAverageScores.map((pair, index) => `${pair[0]}`);
+  const sortedAverageScores = sortedPairLabelsAverageScores.map((pair, index) => `${pair[1]}`);
 
   const resultMessages: string[] = [];
   for (let i = 0; i < cum_lengths.length - 1; i++) {
@@ -89,6 +95,11 @@ export default function Home() {
   const handleShowResults = () => {
     // 結果を表示するボタンをクリックしたら結果を表示
     setShowResults(true);
+  };
+
+  const handleToggleSort = () => {
+    // スコアのソート順を切り替える
+    setSortDescending(!sortDescending);
   };
 
   // 棒グラフのデータ
@@ -122,11 +133,11 @@ export default function Home() {
     },
   };
   const barChartData = {
-    labels: labels, // カテゴリーデータを設定
+    labels: sortDescending ? sortedLabels : labels,
     datasets: [
       {
         label: 'スコア',
-        data: averageScores,
+        data: sortDescending ? sortedAverageScores : averageScores,
         borderColor: 'rgb(255, 99, 132)',
         backgroundColor: 'rgba(255, 99, 132, 0.5)',
         borderWidth: 3,
@@ -184,6 +195,7 @@ export default function Home() {
         {showResults && ( // 結果を表示する場合に表示
           <div>
             <h2>結果</h2>
+            <button onClick={handleToggleSort}>{sortDescending ? '質問順に並べ替え' : '降順に並べ替え'}</button>
             <div className="mx-auto max-w-min">
               <Bar // 棒グラフを表示
                 data={barChartData}
