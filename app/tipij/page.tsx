@@ -87,11 +87,6 @@ export default function Home() {
 
   // 棒グラフのデータ
   const options = {
-    // elements: {
-    //   line: {
-    //     borderWidth: 5,
-    //   },
-    // },
     scales: {
       r: {
         angleLines: {
@@ -101,7 +96,10 @@ export default function Home() {
         max: 14,
         ticks: {
           stepSize: 2
-        }
+        },
+        grid: {
+          lineWidth: (ctx: any) => [2, 8, 14].includes(ctx.tick.value) ? 4 : 2,
+        },
       },
     },
     maintainAspectRatio: false,
@@ -113,7 +111,7 @@ export default function Home() {
       },
       title: {
         display: true,
-        text: '結果のグラフ',
+        text: 'あなたのビッグファイブ',
       },
     },
   };
@@ -126,7 +124,6 @@ export default function Home() {
         fill: true,
         borderColor: 'rgb(255, 99, 132)',
         backgroundColor: 'rgba(255, 99, 132, 0.5)',
-        // borderWidth: 3,
         pointHoverBackgroundColor: 'rgba(75, 192, 192, 0.8)',
         pointHoverBorderColor: 'rgba(75, 192, 192, 1)',
       },
