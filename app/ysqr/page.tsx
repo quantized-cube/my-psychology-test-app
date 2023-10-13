@@ -71,11 +71,11 @@ const dictLabels: { [key: string]: string } = {
 
 // 1-5: ED
 const questions_1_ED = [
-  "I haven't gotten enough love and attention.",
-  "For the most part, I haven't had someone to depend on for advice and emotional support.",
-  "For much of my life, I haven't had someone who wanted to get close to me and spend a lot of time with me.",
-  "For much of my life, I haven't felt that I am special to someone. ",
-  "I have rarely had a strong person to give me sound advice or direction when I'm not sure what to do.",
+  "私は十分な愛と注目を浴びていない。",
+  "ほとんどの場合、アドバイスや精神的なサポートをしてくれる頼れる人がいなかった。",
+  "私の人生の大半は、私に近づき、多くの時間を一緒に過ごしたいと思う人がいなかった。",
+  "私の人生の大半は、自分が誰かにとって特別な存在だとは感じてこなかった。",
+  "どうしたらいいかわからないときに、的確なアドバイスや方向性を示してくれるような力強い人は、これまでほとんどいなかった。",
 ];
 
 // 6-13: AB
@@ -361,6 +361,9 @@ export default function Home() {
         ticks: {
           stepSize: 1,
         },
+        grid: {
+          lineWidth: (ctx: any) => [4].includes(ctx.tick.value) ? 4 : 2,
+        },
       }
     },
     plugins: {
@@ -370,7 +373,7 @@ export default function Home() {
       },
       title: {
         display: true,
-        text: '結果のグラフ',
+        text: 'あなたのスキーマの得点',
       },
     },
   };
@@ -393,17 +396,33 @@ export default function Home() {
     <div>
       <Head>
         <title>YSQ-R</title>
-        <meta name="description" content="YSQ-Rのテスト" />
+        <meta name="description" content="Young Schema Questionnaire - Revised (YSQ-R)" />
       </Head>
 
       <main>
         <h1>YSQ-R</h1>
         <p>
-          https://psychology-training.com.au/schema-therapy-training/resource-material-links/
+          Young Schema Questionnaire - Revised
+        </p>
+        <p>
+          以下に挙げるのは、誰かが自分自身を説明するために使いそうな文です。それぞれの文章を読んで、どの程度自分を表しているか判断してください。判断に迷う場合は、あなたが真実だと<strong>思う</strong>ことではなく、あなたが感情的に<strong>感じる</strong>ことを基にしてください。あなたを表す<strong>最も高い評価を1～6</strong>の中から選んでください。
         </p>
         <p>
           1 = まったく当てはまらない
-          ……
+        </p>
+        <p>
+          2 = ほとんど当てはまらない
+        </p>
+        <p>
+          3 = どちらかと言えば当てはまる
+        </p>
+        <p>
+          4 = まぁまぁ当てはまる
+        </p>
+        <p>
+          5 = ほとんど当てはまる
+        </p>
+        <p>
           6 = 完璧に当てはまる
         </p>
 
@@ -438,18 +457,26 @@ export default function Home() {
               <Bar // 棒グラフを表示
                 data={barChartData}
                 // width={600}
-                height={600}
+                height={500}
                 options={options}
               />
             </div>
             {labels.map((label, index) => (
               <div key={label}>
-                <h3>{label} {dictLabels[label]}スキーマ</h3>
-                <p>{resultMessages[index]}</p>
+                <p>{label} {dictLabels[label]}スキーマ：{averageScores[index].toFixed(2)}</p>
               </div>
             ))}
           </div>
         )}
+        <hr style={{ margin: '30px' }} />
+        <p>
+          出典：以下のサイト
+        </p>
+        <p>
+          <Link href="https://psychology-training.com.au/schema-therapy-training/resource-material-links/">
+            https://psychology-training.com.au/schema-therapy-training/resource-material-links/
+          </Link>
+        </p>
         <hr style={{ margin: '30px' }} />
         <div style={{ fontSize: '16px', margin: '30px' }}>
           <Link href="/">
