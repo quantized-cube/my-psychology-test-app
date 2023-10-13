@@ -134,21 +134,42 @@ export default function Home() {
     <div>
       <Head>
         <title>TIPI-J</title>
-        <meta name="description" content="TIPI-Jのテスト" />
+        <meta name="description" content="日本語版 Ten Item Personality Inventory (TIPI-J)" />
       </Head>
 
       <main>
         <h1>TIPI-J</h1>
         <p>
-          https://gosling.psy.utexas.edu/wp-content/uploads/2014/09/2012TIPI_J.pdf
+          日本語版 Ten Item Personality Inventory (TIPI-J)
         </p>
         <p>
-          私は自分自身のことを……
+          以下のことばがあなた自身についてどのくらい当てはまるかについて、1から7までの数字のうちもっとも適切なものを選んでください。文章全体を総合的に見て、自分にどれだけ当てはまるかを評価してください。
         </p>
         <p>
           1 = 全く違うと思う
-          ……
+        </p>
+        <p>
+          2 = おおよそ違うと思う
+        </p>
+        <p>
+          3 = 少し違うと思う
+        </p>
+        <p>
+          4 = どちらでもない
+        </p>
+        <p>
+          5 = 少しそう思う
+        </p>
+        <p>
+          6 = まあまあそう思う
+        </p>
+        <p>
           7 = 強くそう思う
+        </p>
+        <hr style={{ margin: '30px' }} />
+        <h2>設問</h2>
+        <p>
+          私は自分自身のことを……
         </p>
 
         {questions.map((question, index) => (
@@ -178,8 +199,8 @@ export default function Home() {
             <div className="mx-auto max-w-min">
               <Radar
                 data={radarChartData}
-                // width={50}
-                height={500}
+                // width={400}
+                height={400}
                 options={options}
               />
             </div>
@@ -191,6 +212,15 @@ export default function Home() {
             ))}
           </div>
         )}
+        <hr style={{ margin: '30px' }} />
+        <p>
+          出典：日本語版 Ten Item Personality Inventory (TIPI-J) 作成の試み
+        </p>
+        <p>
+          <Link href="https://gosling.psy.utexas.edu/wp-content/uploads/2014/09/2012TIPI_J.pdf">
+            https://gosling.psy.utexas.edu/wp-content/uploads/2014/09/2012TIPI_J.pdf
+          </Link>
+        </p>
         <hr style={{ margin: '30px' }} />
         <div style={{ fontSize: '16px', margin: '30px' }}>
           <Link href="/">
