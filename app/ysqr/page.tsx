@@ -80,32 +80,32 @@ const questions_1_ED = [
 
 // 6-13: AB
 const questions_2_AB = [
-  "I worry that people I feel close to will leave me or abandon me.",
-  "I don't feel that important relationships will last; I expect them to end.",
-  "I feel addicted to partners who can't be there for me in a committed way.",
-  "I become upset when someone leaves me alone, even for a short period of time. ",
-  "I can't let myself get very close to other people, because I can't be sure they'll always be there.",
-  "The people close to me have been very unpredictable: one moment they're available and nice to me; the next, they're angry, upset, self-absorbed, fighting, etc.",
-  "I need other people so much that I worry about losing them. ",
-  "I can't be myself or express what I really feel, or people will leave me.",
+  "親しみを感じている人たちが私のもとを去ったり、私を見捨てたりするのではないかと心配になる。",
+  "重要な人間関係が長続きするとは感じない。終わることを期待している。",
+  "私は、献身的に私のそばにいることができないパートナーに依存していると感じる。",
+  "私は、たとえ短時間であっても、誰かに一人にされると動揺してしまう。",
+  "他の人たちと親しくなることはできない、なぜなら彼らがいつもそこにいると確信できないからだ。",
+  "私の親しい人たちは、ある瞬間は私に優しく接してくれるが、次の瞬間には怒ったり、動揺したり、自己中心的になったり、ケンカをしたりと、とても予測がつかない。",
+  "私は他人を必要とするあまり、他人を失うことを心配する。",
+  "ありのままの自分でいることも、本当の気持ちを表現することもできない。さもないと、人々が私から離れてしまう。",
 ];
 
 // 14-18: MA
 const questions_3_MA = [
-  "I feel that I cannot let my guard down in the presence of other people, or else they will intentionally hurt me.",
-  "It is only a matter of time before someone betrays me. ",
-  "I have a great deal of difficulty trusting people. ",
-  "I set up \"tests\" for other people, to see if they are telling me the truth and are well-intentioned. ",
-  "I subscribe to the belief: \"Control or be controlled.\"",
+  "他人の前では油断できないし、そうしないとわざと傷つけられるような気がする。",
+  "誰かが私を裏切るのは時間の問題だ。",
+  "私は人を信じることがとても苦手だ。",
+  "私は他人に“テスト”を課し、彼らが私に真実を語っているか、善意であるかを確認する。",
+  "私はこう信じている： 「コントロールするか、されるかだ。」",
 ];
 
 // 19-23: SI
 const questions_4_SI = [
-  "I'm fundamentally different from other people.",
-  "I don't belong; I'm a loner.",
-  "I always feel on the outside of groups.",
-  "No one really understands me.",
-  "I sometimes feel as if I'm an alien.",
+  "私は他の人とは根本的に違う。",
+  "私は所属していない。私は一匹狼だ。",
+  "私はいつもグループの外側にいると感じている。",
+  "誰も私のことを本当には理解してくれない。",
+  "私は時々、自分が宇宙人であるかのように感じることがある。",
 ];
 
 // 24-29: DS
