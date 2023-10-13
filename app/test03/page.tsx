@@ -153,9 +153,25 @@ export default function Home() {
         label: 'スコア',
         data: sortDescending ? sortedAverageScores : averageScores,
         borderColor: 'rgb(255, 99, 132)',
-        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        backgroundColor: (context: any) => {
+          // context.dataIndex は各バーのインデックスを表します
+          const score: any = sortDescending
+            ? sortedAverageScores[context.dataIndex]
+            : averageScores[context.dataIndex];
+
+          // スコアが4以上の場合に色を変える
+          return score >= 4 ? 'rgba(200, 55, 80, 0.8)' : 'rgba(255, 99, 132, 0.4)';
+        },
         borderWidth: 3,
-        hoverBackgroundColor: 'rgba(75, 192, 192, 0.8)',
+        hoverBackgroundColor: (context: any) => {
+          // context.dataIndex は各バーのインデックスを表します
+          const score: any = sortDescending
+            ? sortedAverageScores[context.dataIndex]
+            : averageScores[context.dataIndex];
+
+          // スコアが4以上の場合に色を変える
+          return score >= 4 ? 'rgba(60, 150, 150, 0.8)' : 'rgba(80, 200, 200, 0.8)';
+        },
         hoverBorderColor: 'rgba(75, 192, 192, 1)',
       },
     ],
