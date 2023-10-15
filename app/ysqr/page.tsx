@@ -110,44 +110,44 @@ const questions_4_SI = [
 
 // 24-29: DS
 const questions_5_DS = [
-  "No one I desire would want to stay close to me if he/she knew the real me. ",
-  "I am inherently flawed and defective. ",
-  "I feel that I'm not lovable. ",
-  "I am too unacceptable in very basic ways to reveal myself to other people.",
-  "When people like me, I feel I am fooling them.",
-  "I cannot understand how anyone could love me.",
+  "本当の私を知ったら、私が望む人は誰も私のそばにいたいと思わないだろう。",
+  "私は本質的に欠点があり、欠陥がある。",
+  "私は愛すべき人間ではないと感じる。",
+  "他人に自分をさらけ出すのは、とても基本的なところであまりにも受け入れられない。",
+  "人に好かれると、自分が人を騙していると感じる。",
+  "私を愛してくれる人がいるなんて理解できない。",
 ];
 
 // 30-35: FA
 const questions_6_FA = [
-  "Almost nothing I do at work (or school) is as good as other people can do.  ",
-  "Most other people are more capable than I am in areas of work (or school) and achievement. ",
-  "I'm a failure.",
-  "I'm not as talented as most people are at their work (or at school).",
-  "I often feel embarrassed around other people, because I don't measure up to them in terms of my accomplishments. ",
-  "I often compare my accomplishments with others and feel that they are much more successful. ",
+  "私が仕事（あるいは学校）でやっていることはほとんど、他の人がやっていることに比べれば、優れたものではない。",
+  "仕事（あるいは学校）や業績の分野では、他のほとんどの人は私より能力がある。",
+  "私は失敗作だ。",
+  "私は仕事（あるいは学校）において、ほとんどの人ほど才能がない。",
+  "私の業績は他の人たちに及ばないので、彼らと一緒にいて恥ずかしいと思うことがよくある。",
+  "私はよく他の人と自分の業績を比べて、彼らの方がずっと成功していると感じる。",
 ];
 
 // 36-43: DI
 const questions_7_DI = [
-  "I do not feel capable of getting by on my own in everyday life.",
-  "I believe that other people can take of me better than I can take care of myself.",
-  "I have trouble tackling new tasks outside of work unless I have someone to guide me.",
-  "I screw up everything I try, even outside of work (or school).",
-  "If I trust my own judgment in everyday situations, I'll make the wrong decision.",
-  "I feel that I need someone I can rely on to give me advice about practical issues.",
-  "I feel more like a child than an adult when it comes to handling everyday responsibilities.",
-  "I find the responsibilities of everyday life overwhelming.",
+  "日常生活で自分ひとりでやっていけるとは思えない。",
+  "自分が自分の面倒を見るよりも、他人の方が自分の面倒を見ることができると信じている。",
+  "指導してくれる人がいないと、仕事以外の新しいタスクに取り組むのは難しい。",
+  "仕事（あるいは学校）以外でも、何をやっても失敗する。",
+  "日常的な場面で自分の判断を信じると、間違った判断をしてしまう。",
+  "現実的な問題についてアドバイスをくれる頼れる人が必要だと感じている。",
+  "日常的な責任を果たすことに関しては、大人というより子供のように感じる。",
+  "私は日常生活の責任に圧倒されている。",
 ];
 
 // 44-49: VH
 const questions_8_VH = [
-  "I feel that a disaster (natural, criminal, financial, or medical) could strike at any moment.",
-  "I worry about being attacked.",
-  "I take great precautions to avoid getting sick or hurt.",
-  "I worry that I'm developing a serious illness, even though nothing serious has been diagnosed by a physician.",
-  "I worry a lot about the bad things happening in the world: crime, pollution, etc.",
-  "I feel that the world is a dangerous place.",
+  "災害（自然災害、犯罪災害、金融災害、医療災害）はいつ襲ってきてもおかしくないと感じている。",
+  "私は攻撃されることを心配している。",
+  "私は病気や怪我をしないように細心の注意を払っている。",
+  "医師から深刻な病気とは診断されていないにもかかわらず、深刻な病気を発症しているのではないかと心配になる。",
+  "犯罪や公害など、世界で起こっている悪いことをとても心配している。",
+  "世界は危険な場所だと感じている。",
 ];
 
 // 50-56: EM
