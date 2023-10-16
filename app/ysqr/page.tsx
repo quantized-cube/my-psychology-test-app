@@ -152,70 +152,70 @@ const questions_8_VH = [
 
 // 50-56: EM
 const questions_9_EM = [
-  "My parent(s) and I tend to be overinvolved in each other's lives and problems.",
-  "It is very difficult for my parent(s) and me to keep intimate details from each other, without feeling betrayed or guilty.",
-  "My parent(s) and I must speak to each other almost every day, or else one of us feels guilty, hurt, disappointed, or alone.",
-  "I often feel that I do not have a separate identity from my parents or partner.",
-  "It is very difficult for me to maintain any distance from the people I am intimate with; I have trouble keeping any separate sense of myself.",
-  "I often feel that I have no privacy when it comes to my parent(s) or partner.",
-  "I feel that my parent(s) are, or would be, very hurt about my living on my own, away from them.",
+  "（両）親と私は、お互いの生活や問題に過干渉になりがちだ。",
+  "（両）親と私にとって、裏切られたと感じたり、罪悪感を感じたりすることなく、親密な内容をお互いに隠しておくことは、とても難しい。",
+  "（両）親と私はほとんど毎日話をしなければならず、そうしないとどちらかが罪悪感を感じたり、傷ついたり、失望したり、孤独を感じたりする。",
+  "私はよく、自分には両親やパートナーとは別のアイデンティティがないと感じる。",
+  "親しい人と距離を保つのはとても難しい。自分というものを切り離して考えることが苦手だ。",
+  "（両）親やパートナーに対して、プライバシーがないと感じることがよくある。",
+  "私が親元を離れて一人暮らしをすることについて、（両）親はとても傷ついているか、傷つくだろうと感じる。",
 ];
 
 // 57- 61: SB
 const questions_10_SB = [
-  "I believe that if I do what I want, I'm only asking for trouble.",
-  "In relationships, I let the other person have the upper hand.",
-  "I've always let others make choices for me, so I really don't know what I want for myself.",
-  "I worry a lot about pleasing other people, so they won't reject me.",
-  "I will go to much greater lengths than most people to avoid confrontations.",
+  "自分のやりたいようにやっても、トラブルを招くだけだと思う。",
+  "人間関係において、私は相手に優位に立たせている。",
+  "私はいつも他人に選択を委ねてきたから、自分自身が何を望んでいるのか本当にわからない。",
+  "他人に拒絶されないように、他人を喜ばせることをとても気にしている。",
+  "私は対立を避けるためなら、普通の人よりもずっと手間を惜しまない。",
 ];
 
 // 62-67: SS
 const questions_11_SS = [
-  "I give more to other people than I get back in return.",
-  "I'm the one who usually ends up taking care of the people I'm close to.",
-  "No matter how busy I am, I can always find time for others.",
-  "I've always been the one who listens to everyone else's problems.",
-  "Other people see me as doing too much for others and not enough for myself.",
-  "No matter how much I give; I feel it is never enough.",
+  "私は見返りを得るよりも、人に与えることの方が多い。",
+  "私は普段、親しい人の面倒を見ることになる。",
+  "どんなに忙しくても、人のために時間を割くことができる。",
+  "私はいつも、みんなの悩みを聞く側だった。",
+  "他の人たちは、私が他人のために尽くしすぎて、自分のために十分なことをしていないと見ている。",
+  "いくら与えても足りないと感じる。",
 ];
 
 // 68-71: FLC
 const questions_12_FLC = [
-  "I worry about losing control of my actions.",
-  "I worry that I might seriously harm someone physically or emotionally if my anger gets out of control.",
-  "I feel that I must control my emotions and impulses, or something bad is likely to happen.",
-  "A lot of anger and resentment build up inside of me that I don't express.",
+  "自分の行動をコントロールできなくなることを心配している。",
+  "怒りが抑えられなくなったら誰かに身体的または精神的に深刻な危害を加えるのではないかと心配になる。",
+  "自分の感情や衝動をコントロールしなければ、何か悪いことが起こりそうな気がする。",
+  "表現できない怒りや憤りが私の中に溜まっている。",
 ];
 
 // 72-76:EC
 const questions_13_EC = [
-  "I am too self-conscious to show positive feelings to others (e.g., affection, showing I care).",
-  "I find it embarrassing to express my feelings to others.",
-  "I find it hard to be warm and spontaneous.",
-  "I control myself so much that people think I am unemotional.",
-  "People see me as uptight emotionally.",
+  "自意識過剰で、他人に肯定的な感情を示せない（愛情、気遣いを示すなど）。",
+  "自分の気持ちを他人に伝えるのは恥ずかしいことだと思う。",
+  "温かく自発的に行動するのは難しい。",
+  "私は自分をコントロールしすぎて、感情的でないと思われてしまう。",
+  "みんなは私のことを感情的に堅苦しいと見ている。",
 ];
 
 // 77-83: US
 const questions_14_US = [
-  "I must be the best at most of what I do; I can't accept second best. ",
-  "I strive to keep almost everything in perfect order.  ",
-  "I have so much to accomplish that there is almost no time to really relax.",
-  "I must meet all my responsibilities.",
-  "I often sacrifice pleasure and happiness to meet my own standards.",
-  "I can't let myself off the hook easily or make excuses for my mistakes.",
-  "I always must be Number One, in terms of my performance.",
+  "私は自分のすることのほとんどで一番でなければならない。二番目は受け入れられない。",
+  "私はほぼすべてのものを完璧な状態に保つよう努めている。",
+  "やり遂げなければならないことが多すぎて、本当にリラックスする時間はほとんどない。",
+  "私はすべての責任を果たさなければならない。",
+  "私は自分の基準を満たすために、喜びや幸福を犠牲にすることが多い。",
+  "自分のミスを簡単に見逃したり、言い訳をするわけにはいかない。",
+  "自分のパフォーマンスに関しては、常にナンバーワンでなければならない。",
 ];
 
 // 84-89: ET
 const questions_15_ET = [
-  "I have a lot of trouble accepting \"no\" for an answer when I want something from other people.",
-  "I hate to be constrained or kept from doing what I want.",
-  "I feel that I shouldn't have to follow the normal rules and conventions other people do. ",
-  "I often find that I am so involved in my own priorities that I don't have time to give to friends or family.",
-  "People often tell me I am very controlling about the ways things are done.",
-  "I can't tolerate other people telling me what to do.",
+  "他の人に何かを求めるときに、「ノー」という答えを受け入れるのがとても苦手だ。",
+  "私は束縛されたり、自分のやりたいことを妨げられたりするのが大嫌いだ。",
+  "他の人がやっている普通のルールや慣習に従う必要はないと感じている。",
+  "自分のことを優先するあまり、友人や家族に割く時間がないことがよくある。",
+  "私はよく、物事の進め方についてとても支配的だと言われる。",
+  "他人が私に指図するのは許せない。",
 ];
 
 // 90-94: IS
