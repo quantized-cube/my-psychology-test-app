@@ -220,49 +220,49 @@ const questions_15_ET = [
 
 // 90-94: IS
 const questions_16_IS = [
-  "I can't seem to discipline myself to complete routine or boring tasks.",
-  "Often I allow myself to carry through on impulses and express emotions that get me into trouble or hurt other people.",
-  "I get bored very easily.",
-  "When tasks become difficult, I usually cannot persevere and complete them.",
-  "I can't force myself to do things I don't enjoy, even when I know it's for my own good.",
-  "I have rarely been able to stick to my resolutions.",
-  "I often do things impulsively that I later regret.",
+  "ルーチンワークや退屈な仕事をこなすために自分を律することができないようだ。",
+  "私はしばしば、衝動を貫き、感情を表現してトラブルに巻き込まれたり、他の人を傷つけたりすることがある。",
+  "私はすぐに飽きてしまう。",
+  "仕事が難しくなると、私はたいてい我慢してやり遂げることができない。",
+  "自分のためになるとわかっていても、楽しくないことを無理にすることはできない。",
+  "私はこれまで、自分の決意を貫き通したことがほとんどない。",
+  "私は衝動的に物事を行い、後で後悔することがよくある。",
 ];
 
 // 97-101: AS
 const questions_17_AS = [
-  "It is important to me to be liked by almost everyone I know.",
-  "I change myself depending on the people I'm with, so they'll like me more.",
-  "My self-esteem is based mostly on how other people view me.",
-  "Even if I don't like someone, I still want him or her to like me.",
-  "Unless I get a lot of attention from others, I feel less important.",
+  "知り合いのほとんど全員に好かれることは、私にとって重要だ。",
+  "より好かれるように、一緒にいる人によって自分を変える。",
+  "私の自尊心は、他人が私をどう見ているかにほとんど基づいている。",
+  "たとえ誰かを好きじゃなかったとしても、その人に好かれたいと思う。",
+  "他人から多くの注目を集めないと、自分はあまり重要でないと感じる。",
 ];
 
 // 102-107: NP
 const questions_18_NP = [
-  "You can't be too careful; something will almost always go wrong.",
-  "I worry that a wrong decision could lead to disaster.",
-  "I often obsess over minor decisions, because the consequences of making a mistake seem so serious.",
-  "I feel better assuming things will not work out for me, so that I don't feel disappointed if things go wrong.",
-  "I tend to be pessimistic.",
-  "If people get too enthusiastic about something, I become uncomfortable and feel like warning them of what could go wrong.",
+  "用心に越したことはない。ほとんどの場合、何かがうまくいかないものだ。",
+  "決断を誤れば、大惨事につながるのではないかと心配だ。",
+  "ミスを犯すと、その結果はとても深刻なものに思えるため、些細な決断にこだわることが多い。",
+  "物事がうまくいかなくてもがっかりしないように、うまくいかないと想定した方が気が楽だ。",
+  "私は悲観的になりがちだ。",
+  "人が何かに熱中しすぎると、私は不愉快になり、何が問題になるかを警告したくなる。",
 ];
 
 // 108-112: PUS
 const questions_19_PUS = [
-  "If I make a mistake, I deserve to be punished.",
-  "There is no excuse if I make mistake.",
-  "If I don't do the job, I should suffer the consequences.",
-  "It doesn't matter why I make a mistake; when I do something wrong, I should pay the price.",
-  "I'm a bad person who deserves to be punished.",
+  "私がミスを犯せば、罰を受けるのは当然だ。",
+  "私が間違いを犯しても言い訳はできない。",
+  "もし私が仕事をしなければ、その結果に苦しむことになる。",
+  "なぜ私がミスを犯したかは関係ない。間違ったことをしたら、その代償を払うべきだ。",
+  "私は罰を受けるに値する悪人だ。",
 ];
 
 // 113-116: PUO
 const questions_20_PUO = [
-  "People who don't \"pull their own weight\" should get punished in some way.",
-  "Most of the time, I don't accept the excuses other people make. They're just not willing to accept responsibility and pay the consequences.",
-  "I hold grudges, even after someone has apologized.",
-  "I get angry when people make excuses for themselves or blame other people for their problems.",
+  "自分の責任を果たさない人は、何らかの形で罰を受けるべきだ。",
+  "たいていの場合、私は他人の言い訳を受け入れない。彼らはただ、責任を受け入れ、報いを受ける気がないだけだ。",
+  "誰かが謝った後であっても、私は恨みを抱く。",
+  "私は、人々が自分の言い訳をしたり、自分の問題を他人のせいにしたりすることに腹が立つ。",
 ];
 
 const a_questions = [
