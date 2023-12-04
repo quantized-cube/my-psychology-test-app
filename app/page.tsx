@@ -26,18 +26,8 @@ export default function Home() {
             </Link>
           </li>
           <li>
-            <Link href="/test01">
-              心理テスト01
-            </Link>
-          </li>
-          <li>
-            <Link href="/test02">
-              心理テスト02
-            </Link>
-          </li>
-          <li>
-            <Link href="/test03">
-              心理テスト03
+            <Link href="/careeranchors">
+              キャリア・アンカー
             </Link>
           </li>
         </ul>
