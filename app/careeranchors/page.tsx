@@ -294,8 +294,7 @@ export default function Home() {
             <div className="mx-auto max-w-min">
               <Bar // 棒グラフを表示
                 data={barChartData}
-                // width={600}
-                height={500}
+                height={350}
                 options={options}
               />
             </div>
