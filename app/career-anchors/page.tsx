@@ -146,7 +146,7 @@ export default function Home() {
   // スコアの降順のラベル
   const sortedLabels = Object.keys(sortedObjLabelsAverageScores);
   // スコアの降順のスコア
-  const sortedResultScores = Object.values(sortedObjLabelsAverageScores);
+  const sortedResultScores: number[] = Object.values(sortedObjLabelsAverageScores);
 
   const resultMessages: string[] = [];
   for (let i = 0; i < 5; i++) {
@@ -298,9 +298,9 @@ export default function Home() {
                 options={options}
               />
             </div>
-            {labels.map((label, index) => (
+            {(sortDescending ? sortedLabels : labels).map((label, index) => (
               <div key={label}>
-                <p>{label}：{resultScores[index].toFixed(1)}</p>
+                <p>{label}：{(sortDescending ? sortedResultScores : resultScores)[index].toFixed(2)}</p>
               </div>
             ))}
           </div>

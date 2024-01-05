@@ -2,7 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export const config = {
   matcher: [
-    '/test04'
+    '/test04',
+    '/time-perspective',
   ],
 };
 
@@ -14,8 +15,17 @@ export function middleware(req: NextRequest) {
     const auth = basicAuth.split(' ')[1];
     const [user, password] = Buffer.from(auth, 'base64').toString().split(':');
 
-    if (url.pathname === '/test04' && user === process.env.BASIC_USER_NAME && password === process.env.BASIC_PASSWORD) {
-      return NextResponse.next();
+    switch (url.pathname) {
+      case '/test04':
+        if (user === process.env.BASIC_USER_NAME && password === process.env.BASIC_PASSWORD) {
+          return NextResponse.next();
+        }
+        break;
+      case '/time-perspective':
+        if (user === process.env.TIME_PERSPECTIVE_USER_NAME && password === process.env.TIME_PERSPECTIVE_PASSWORD) {
+          return NextResponse.next();
+        }
+        break;
     }
   }
 
