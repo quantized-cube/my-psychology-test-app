@@ -489,12 +489,6 @@ export default function Home() {
             https://psychology-training.com.au/schema-therapy-training/resource-material-links/
           </Link>
         </p>
-        <hr style={{ margin: '30px' }} />
-        <div style={{ fontSize: '16px', margin: '30px' }}>
-          <Link href="/">
-            トップページに戻る
-          </Link>
-        </div>
       </main>
     </div>
   );

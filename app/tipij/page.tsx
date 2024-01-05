@@ -221,12 +221,6 @@ export default function Home() {
             https://gosling.psy.utexas.edu/wp-content/uploads/2014/09/2012TIPI_J.pdf
           </Link>
         </p>
-        <hr style={{ margin: '30px' }} />
-        <div style={{ fontSize: '16px', margin: '30px' }}>
-          <Link href="/">
-            トップページに戻る
-          </Link>
-        </div>
       </main>
     </div>
   );

@@ -22,6 +22,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Link className='header' href="/">トップページ</Link>
         {children}
+        <Link className='footer' href="/">トップページ</Link>
         <Analytics />
         <SpeedInsights />
       </body>

@@ -231,8 +231,7 @@ export default function Home() {
             <div className="mx-auto max-w-min">
               <Bar // 棒グラフを表示
                 data={barChartData}
-                // width={600}
-                height={500}
+                height={350}
                 options={options}
               />
             </div>
@@ -257,12 +256,6 @@ export default function Home() {
             https://daigovideolab.jp/blog/2134141
           </Link>
         </p>
-        <hr style={{ margin: '30px' }} />
-        <div style={{ fontSize: '16px', margin: '30px' }}>
-          <Link href="/">
-            トップページに戻る
-          </Link>
-        </div>
       </main>
     </div>
   );

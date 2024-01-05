@@ -311,12 +311,6 @@ export default function Home() {
             キャリア・アンカー―自分のほんとうの価値を発見しよう
           </Link>
         </p>
-        <hr style={{ margin: '30px' }} />
-        <div style={{ fontSize: '16px', margin: '30px' }}>
-          <Link href="/">
-            トップページに戻る
-          </Link>
-        </div>
       </main>
     </div>
   );
