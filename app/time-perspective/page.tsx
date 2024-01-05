@@ -227,7 +227,7 @@ export default function Home() {
         {showResults && ( // 結果を表示する場合に表示
           <div>
             <h2>結果</h2>
-            <button onClick={handleToggleSort}>{sortDescending ? '質問順に並べ替え' : '降順に並べ替え'}</button>
+            <button onClick={handleToggleSort}>{sortDescending ? 'デフォルト順に並べ替え' : '降順に並べ替え'}</button>
             <div className="mx-auto max-w-min">
               <Bar // 棒グラフを表示
                 data={barChartData}
