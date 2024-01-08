@@ -14,12 +14,12 @@ export default function Home() {
         <h1>心理テストまとめ</h1>
         <ul>
           <li>
-            <Link href="/tipij">
+            <Link href="/tipi-j">
               TIPI-J
             </Link>
           </li>
           <li>
-            <Link href="/ysqr">
+            <Link href="/ysq-r">
               YSQ-R
             </Link>
           </li>
