@@ -29,9 +29,9 @@ export default function Home() {
             </Link>
           </li>
           <li>
-            <Link href="/time-perspective">
+            <a href="/time-perspective">
               時間志向チェックテスト
-            </Link>
+            </a>
             <p style={{ fontSize: '0.8rem' }}>パスワード：10問目の最初5文字をアルファベット半角小文字</p>
           </li>
         </ul>
