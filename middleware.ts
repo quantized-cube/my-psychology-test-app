@@ -1,21 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const matcher = [
-  '/test04',
-  '/time-perspective',
-]
-
 export const config = {
-  matcher: matcher,
+  matcher: [
+    '/test04',
+    '/time-perspective',
+  ],
 };
 
 export function middleware(req: NextRequest) {
   const basicAuth = req.headers.get('authorization');
   const url = req.nextUrl;
-
-  if (!matcher.includes(url.pathname)) {
-    return NextResponse.next();
-  }
 
   if (basicAuth) {
     const auth = basicAuth.split(' ')[1];
