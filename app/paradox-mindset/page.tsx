@@ -141,20 +141,20 @@ export default function Home() {
       annotation: {
         annotations: {
           line1: {
-            type: 'line',
+            type: 'line' as const,
             yMin: 4.38,
             yMax: 4.38,
             // borderColor: 'rgb(255, 99, 132)',
             borderWidth: 2,
           },
           line2: {
-            type: 'line',
+            type: 'line' as const,
             xMin: 4.9,
             xMax: 4.9,
             borderWidth: 2,
           },
           label1: {
-            type: 'label',
+            type: 'label' as const,
             xValue: 6,
             yValue: 6,
             backgroundColor: 'rgba(245,245,245,0.5)',
@@ -164,7 +164,7 @@ export default function Home() {
             }
           },
           label2: {
-            type: 'label',
+            type: 'label' as const,
             xValue: 3,
             yValue: 6,
             backgroundColor: 'rgba(245,245,245,0.5)',
@@ -174,7 +174,7 @@ export default function Home() {
             }
           },
           label3: {
-            type: 'label',
+            type: 'label' as const,
             xValue: 6,
             yValue: 2.8,
             backgroundColor: 'rgba(245,245,245,0.5)',
@@ -184,7 +184,7 @@ export default function Home() {
             }
           },
           label4: {
-            type: 'label',
+            type: 'label' as const,
             xValue: 3,
             yValue: 2.8,
             backgroundColor: 'rgba(245,245,245,0.5)',
