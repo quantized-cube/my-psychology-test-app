@@ -18,6 +18,7 @@ import {
   Legend,
 } from 'chart.js';
 import { Scatter } from 'react-chartjs-2';
+import annotationPlugin from 'chartjs-plugin-annotation';
 
 ChartJS.register(
   CategoryScale,
@@ -30,16 +31,9 @@ ChartJS.register(
   BarElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
+  annotationPlugin,
 );
-
-const labels = [
-  '外向性',
-  '協調性',
-  '勤勉性',
-  '神経症傾向',
-  '開放性',
-];
 
 const questionsTension = [
   '時として、同時に現れたら矛盾しているように見える2つの考えを、心に抱くことがある',
@@ -144,6 +138,63 @@ export default function Home() {
         display: true,
         text: 'パラドックス・ナビゲーション（両立実践）マトリクス',
       },
+      annotation: {
+        annotations: {
+          line1: {
+            type: 'line',
+            yMin: 4.38,
+            yMax: 4.38,
+            // borderColor: 'rgb(255, 99, 132)',
+            borderWidth: 2,
+          },
+          line2: {
+            type: 'line',
+            xMin: 4.9,
+            xMax: 4.9,
+            borderWidth: 2,
+          },
+          label1: {
+            type: 'label',
+            xValue: 6,
+            yValue: 6,
+            backgroundColor: 'rgba(245,245,245,0.5)',
+            content: ['積極的実践', '（エンゲージメント）', 'ゾーン'],
+            font: {
+              size: 11
+            }
+          },
+          label2: {
+            type: 'label',
+            xValue: 3,
+            yValue: 6,
+            backgroundColor: 'rgba(245,245,245,0.5)',
+            content: ['解決／解消', 'ゾーン'],
+            font: {
+              size: 11
+            }
+          },
+          label3: {
+            type: 'label',
+            xValue: 6,
+            yValue: 2.8,
+            backgroundColor: 'rgba(245,245,245,0.5)',
+            content: ['準備完了', 'ゾーン'],
+            font: {
+              size: 11
+            }
+          },
+          label4: {
+            type: 'label',
+            xValue: 3,
+            yValue: 2.8,
+            backgroundColor: 'rgba(245,245,245,0.5)',
+            content: ['回避／逃避', 'ゾーン'],
+            font: {
+              size: 11
+            }
+          },
+        },
+      },
     },
   };
   const chartData = {
@@ -151,10 +202,12 @@ export default function Home() {
       {
         label: 'スコア',
         data: [{ x: resultScoreParadox, y: resultScoreTension }],
-        // borderColor: 'rgb(255, 99, 132)',
-        backgroundColor: 'rgba(255, 99, 132, 0.5)',
-        // pointHoverBackgroundColor: 'rgba(75, 192, 192, 0.8)',
-        // pointHoverBorderColor: 'rgba(75, 192, 192, 1)',
+        borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgba(255, 99, 132, 1)',
+        pointHoverBackgroundColor: 'rgba(75, 192, 192, 0.8)',
+        pointHoverBorderColor: 'rgba(75, 192, 192, 1)',
+        pointRadius: 7,
+        pointHoverRadius: 8,
       },
     ],
   };
@@ -238,15 +291,14 @@ export default function Home() {
             <div className="mx-auto max-w-min">
               <Scatter
                 data={chartData}
-                // width={400}
-                height={400}
+                width={500}
+                height={500}
                 options={options}
               />
             </div>
             <div>
-              <p>{`緊張関係の経験のスコア: ${resultScoreTension.toFixed(2)} ${isTensionHigh ? ">" : "<"} 4.38`}</p>
-              <p>{`パラドックス・マインドセットのスコア: ${resultScoreParadox.toFixed(2)} ${isParadoxHigh ? ">" : "<"} 4.9`}</p>
-              <p>{`パラドックス・ナビゲーション・マトリクス: ${zone}`}</p>
+              <p>{`緊張関係の経験のスコア: ${resultScoreTension.toFixed(2)}`}</p>
+              <p>{`パラドックス・マインドセットのスコア: ${resultScoreParadox.toFixed(2)}`}</p>
             </div>
           </div>
         )}
