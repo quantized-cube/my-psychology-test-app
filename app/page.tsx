@@ -34,6 +34,11 @@ export default function Home() {
             </a>
             <p style={{ fontSize: '0.8rem' }}>パスワード：10問目の最初5文字をアルファベット半角小文字</p>
           </li>
+          <li>
+            <Link href="/paradox-mindset">
+              パラドックス・マインドセット関連尺度
+            </Link>
+          </li>
         </ul>
       </main>
     </div>
