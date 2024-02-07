@@ -86,7 +86,7 @@ export default function Home() {
   const calcZone = (isTensionHigh: boolean, isParadoxHigh: boolean) => {
     // 等号になることはない
     if (isTensionHigh && isParadoxHigh) {
-      return "積極的実践（エンゲージメント）ゾーン";
+      return "積極的実践（エンゲージング）ゾーン";
     } else if (isTensionHigh && !isParadoxHigh) {
       return "解決／解消ゾーン";
     } else if (!isTensionHigh && isParadoxHigh) {
@@ -158,7 +158,7 @@ export default function Home() {
             xValue: 6,
             yValue: 6,
             backgroundColor: 'rgba(245,245,245,0.5)',
-            content: ['積極的実践', '（エンゲージメント）', 'ゾーン'],
+            content: ['積極的実践', '（エンゲージング）', 'ゾーン'],
             font: {
               size: 11
             }
