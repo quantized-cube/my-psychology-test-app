@@ -39,6 +39,11 @@ export default function Home() {
               パラドックス・マインドセット関連尺度
             </Link>
           </li>
+          <li>
+            <Link href="/attractiveness">
+              魅力度テスト
+            </Link>
+          </li>
         </ul>
       </main>
     </div>
