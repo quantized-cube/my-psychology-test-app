@@ -485,7 +485,7 @@ export default function Home() {
           出典：以下のサイト
         </p>
         <p>
-          <Link href="https://psychology-training.com.au/schema-therapy-training/resource-material-links/">
+          <Link href="https://psychology-training.com.au/schema-therapy-training/resource-material-links/" target="_blank">
             https://psychology-training.com.au/schema-therapy-training/resource-material-links/
           </Link>
         </p>

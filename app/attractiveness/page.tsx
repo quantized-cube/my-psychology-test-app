@@ -249,7 +249,7 @@ export default function Home() {
         )}
         <hr style={{ margin: '30px' }} />
         <p>
-          出典：<Link href="https://www.amazon.co.jp/dp/4594094279/">
+          出典：<Link href="https://www.amazon.co.jp/dp/4594094279/" target="_blank">
             最強のコミュ力のつくりかた
           </Link>
         </p>

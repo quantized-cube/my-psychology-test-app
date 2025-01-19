@@ -247,12 +247,12 @@ export default function Home() {
           元の記事
         </p>
         <p>
-          <Link href="https://ch.nicovideo.jp/paleo/blomaga/ar2134141">
+          <Link href="https://ch.nicovideo.jp/paleo/blomaga/ar2134141" target="_blank">
             https://ch.nicovideo.jp/paleo/blomaga/ar2134141
           </Link>
         </p>
         <p>
-          <Link href="https://daigovideolab.jp/blog/2134141">
+          <Link href="https://daigovideolab.jp/blog/2134141" target="_blank">
             https://daigovideolab.jp/blog/2134141
           </Link>
         </p>

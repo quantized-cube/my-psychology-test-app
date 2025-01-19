@@ -217,7 +217,7 @@ export default function Home() {
           出典：日本語版 Ten Item Personality Inventory (TIPI-J) 作成の試み
         </p>
         <p>
-          <Link href="https://gosling.psy.utexas.edu/wp-content/uploads/2014/09/2012TIPI_J.pdf">
+          <Link href="https://gosling.psy.utexas.edu/wp-content/uploads/2014/09/2012TIPI_J.pdf" target="_blank">
             https://gosling.psy.utexas.edu/wp-content/uploads/2014/09/2012TIPI_J.pdf
           </Link>
         </p>

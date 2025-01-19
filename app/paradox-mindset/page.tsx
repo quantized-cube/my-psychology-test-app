@@ -304,7 +304,7 @@ export default function Home() {
         )}
         <hr style={{ margin: '30px' }} />
         <p>
-          出典：<Link href="https://www.amazon.co.jp/dp/4800591503/">
+          出典：<Link href="https://www.amazon.co.jp/dp/4800591503/" target="_blank">
             両立思考　「二者択一」の思考を手放し、多様な価値を実現するパラドキシカルリーダーシップ
           </Link>
         </p>
