@@ -44,6 +44,11 @@ export default function Home() {
               魅力度テスト
             </Link>
           </li>
+          <li>
+            <Link href="/nature-connectedness">
+              ネイチャー・コネクテッドネス診断
+            </Link>
+          </li>
         </ul>
       </main>
     </div>
