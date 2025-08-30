@@ -212,8 +212,8 @@ export default function NatureConnectedness() {
         <hr style={{ margin: '30px' }} />
         <p>
           出典：<Link href="https://www.shogakukan-cr.co.jp/book/b10140145.html">
-            『社会は、静かにあなたを「呪う」』、鈴木 祐、小学館クリエイティブ、2025年
-          </Link>
+            『社会は、静かにあなたを「呪う」』
+          </Link>、鈴木 祐、小学館クリエイティブ、2025年
         </p>
         
       </main>
