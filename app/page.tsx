@@ -49,6 +49,11 @@ export default function Home() {
               ネイチャー・コネクテッドネス診断
             </Link>
           </li>
+          <li>
+            <Link href="/nfc">
+              NFCテスト
+            </Link>
+          </li>
         </ul>
       </main>
     </div>
