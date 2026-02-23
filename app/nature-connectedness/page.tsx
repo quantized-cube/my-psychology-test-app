@@ -203,7 +203,7 @@ export default function NatureConnectedness() {
 
         <hr style={{ margin: '30px' }} />
         <p>
-          出典：パレオな男 <Link href="https://yuchrszk.blogspot.com/2025/08/14.html">
+          出典：パレオな男 <Link href="https://yuchrszk.blogspot.com/2025/08/14.html" target="_blank">
             あなたの幸福感を高める「ネイチャー・コネクテッドネス」を判断する14問
           </Link>
         </p>

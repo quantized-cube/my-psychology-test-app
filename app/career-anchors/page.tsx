@@ -307,7 +307,7 @@ export default function Home() {
         )}
         <hr style={{ margin: '30px' }} />
         <p>
-          出典：<Link href="https://www.amazon.co.jp/dp/product/4561233857">
+          出典：<Link href="https://www.amazon.co.jp/dp/product/4561233857" target="_blank">
             キャリア・アンカー―自分のほんとうの価値を発見しよう
           </Link>
         </p>
