@@ -263,7 +263,7 @@ export default function Home() {
         )}
         <hr style={{ margin: '30px' }} />
         <p>
-          出典：<Link href="https://www.amazon.co.jp/dp/B0GHTRCZQ1" target="_blank">
+          出典：<Link href="https://www.amazon.co.jp/dp/4296125869" target="_blank">
             毎日をもっと大切にできるスタンフォードの時間心理学
           </Link>
         </p>
